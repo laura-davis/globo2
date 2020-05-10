@@ -1,0 +1,17 @@
+{
+  "name": "globo2",
+  "displayName": "globo2",
+  "expo": {
+    "name": "globo2",
+    "slug": "globo2",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
