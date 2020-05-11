@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, View, TouchableOpacity, Text, Alert} from "react-native";
+import {StyleSheet, View, TouchableOpacity, Text, Alert} from 'react-native';
 
 export class Menu extends React.Component {
+
     onPress = () => {
         Alert.alert('You tapped the button!');
     }
@@ -10,7 +11,7 @@ export class Menu extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={styles.buttonRow}>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('LessonsRT')}>
                         <Text style={styles.buttonText}>LESSONS</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
@@ -22,7 +23,7 @@ export class Menu extends React.Component {
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
                         <Text style={styles.buttonText}>BLOG</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={() => this.props.navigate('ContactRT')}>
                         <Text style={styles.buttonText}>CONTACT</Text>
                     </TouchableOpacity>
                 </View>
@@ -35,8 +36,9 @@ export class Menu extends React.Component {
                         <Text style={styles.buttonText}>ABOUT</Text>
                     </TouchableOpacity>
                 </View>
+
             </View>
-        )
+        );
     }
 }
 
@@ -60,7 +62,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     buttonText: {
-        color:'#ffffff',
+        color: '#ffffff',
         fontSize: 18
     }
-})
+});

@@ -1,8 +1,12 @@
 import React from 'react';
-import {Home} from './app/views/Home'
+import MyRoutes from './app/views/RootNavigation';
 
-export default function App() {
-  return (
-    <Home/>
-  );
+export default class App extends React.Component {
+    render() {
+        return (
+            <MyRoutes />
+        );
+    }
 }
+
+
