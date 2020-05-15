@@ -5,6 +5,9 @@ import {Video} from './Video';
 import {VideoDetail} from './VideoDetail';
 import {Register} from './Register';
 import {Login} from './Login';
+import {Quiz} from "./Quiz";
+import {QuizFinish} from "./QuizFinish";
+import {About} from "./About";
 import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
 import {createAppContainer} from 'react-navigation';
 
@@ -28,6 +31,15 @@ const MyRoutes = createMaterialTopTabNavigator({
         LoginRT: {
             screen: Login
         },
+        QuizRT: {
+            screen: Quiz
+        },
+        FinishRT: {
+            screen: QuizFinish
+        },
+    AboutRT: {
+            screen: About
+    }
     },
     {
         initialRouteName: 'HomeRT'
